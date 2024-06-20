@@ -1,0 +1,4 @@
+- BusinessType
+	- prevent duplication of the name
+	- only allow superuser to create the business type
+	- 
