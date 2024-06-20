@@ -175,6 +175,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
+    'https://d4-nepal-frontend.vercel.app'
 ]
 
 CORS_ALLOWS_CREDENTIALS = True
