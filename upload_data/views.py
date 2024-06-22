@@ -45,7 +45,8 @@ def create_db(file_path, user, business_profile):
         transaction.rollback()
         # todo delete the uploaded file from the server if data entry is unsuccessful.
         default_storage.delete(file_path)
-        raise e
+        print(e)
+        return Response(e, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
     finally:
         connection.autocommit = True
 
