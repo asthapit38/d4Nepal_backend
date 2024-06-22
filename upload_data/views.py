@@ -61,7 +61,7 @@ class FileUploadAPIView(APIView):
             upload_file = serializer.save(user=self.request.user)
             business_profile = BusinessProfile.objects.get(business_owner=self.request.user,
                                                            id=self.request.data.get('business_profile_id'))
-            create_db(upload_file.file, self.request.user, business_profile)
+            create_db(upload_file.file.path, self.request.user, business_profile)
 
             return Response(
                 serializer.data,
